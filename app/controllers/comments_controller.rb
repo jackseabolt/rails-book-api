@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
 
     def create 
-        @book = Book.find(params[:post_id])
+        # @book = Book.find(params[:post_id])
         @newComment = Comment.new(comment_params)
-        @newComment.book_id = @book.id
+        # @newComment.book_id = @book.id
         @newComment.save
         render json: @newComment, status :created
         
